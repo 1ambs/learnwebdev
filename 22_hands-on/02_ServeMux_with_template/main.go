@@ -12,14 +12,7 @@ func root(w http.ResponseWriter, req *http.Request) {
 	//err := tpl.Execute(w, req)
 	if err != nil {
 		log.Fatalln(err)
-	}	++
-
-
-
-
-
-
-
+	}
 }
 
 func dog(w http.ResponseWriter, req *http.Request) {
@@ -34,17 +27,16 @@ func me(w http.ResponseWriter, req *http.Request) {
 	//if err != nil {
 	//	log.Fatalln(err)
 	//}
-	io.WriteString(w,"David Marubbi")
+	io.WriteString(w, "David Marubbi")
 }
 
 var tpl *template.Template
 
 func init() {
-	 tpl = template.Must(template.ParseFiles("tpl.gohtml"))
+	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
 }
 
 func main() {
-
 
 	http.HandleFunc("/", root)
 
