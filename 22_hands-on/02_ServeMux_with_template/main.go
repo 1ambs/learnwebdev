@@ -33,7 +33,7 @@ func me(w http.ResponseWriter, req *http.Request) {
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
+	tpl = template.Must(template.ParseFiles("dog.gohtml"))
 }
 
 func main() {
